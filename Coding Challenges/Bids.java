@@ -52,4 +52,21 @@ public class Bids {
         return ret;
 
     }
+    public void main(String[] args){
+        Bids test = new Bids();
+        List<Integer> first = new ArrayList<>(Arrays.asList(1,2,5,0));
+        List<Integer> second = new ArrayList<>(Arrays.asList(2,1,4,2));
+        List<Integer> third = new ArrayList<>(Arrays.asList(3,5,4,6));
+        List<List<Integer>> testBids = new ArrayList<>(Arrays.asList(first,second,third));
+        test.distributeBids(testBids, 3);
+        first = new ArrayList<>(Arrays.asList(1,2,4,6208));
+        testBids = new ArrayList<>(Arrays.asList(first));
+        test.distributeBids(testBids, 2);
+        first = new ArrayList<>(Arrays.asList(1,3,1,9866));
+        second = new ArrayList<>(Arrays.asList(2,1,2,5258));
+        third = new ArrayList<>(Arrays.asList(3,2,4,5788));
+        List<Integer> fourth = new ArrayList<>(Arrays.asList(4,2,4,6536));
+        testBids = new ArrayList<>(Arrays.asList(first,second,third,fourth));
+        test.distributeBids(testBids, 2);
+    }
 }
